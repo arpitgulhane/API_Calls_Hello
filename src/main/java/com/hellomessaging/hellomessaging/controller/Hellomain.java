@@ -15,5 +15,10 @@ public class Hellomain {
     public String parameterRequest(@RequestParam String name){
         return "Hello  "+ name +" from BridgeLabz" ;
     }
+    @GetMapping("variable/{name}")
+    public String variableRequest(@PathVariable String name){
+        return "Hello  "+ name +" from BridgeLabz";
+    }
+
 
 }
