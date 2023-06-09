@@ -25,6 +25,10 @@ public class Hellomain {
         return "Hello  "+ hello.getName() +hello.getLastName();
     }
 
+    @PutMapping("/put/{name}")
+    public String putRequest(@PathVariable String name , @RequestParam (value="lastname") String lastname) {
+        return name+" "+lastname;
+    }
 
 
 
