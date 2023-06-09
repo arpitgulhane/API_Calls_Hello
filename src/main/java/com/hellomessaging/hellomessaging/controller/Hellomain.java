@@ -1,5 +1,6 @@
 package com.hellomessaging.hellomessaging.controller;
 
+import com.hellomessaging.hellomessaging.entity.Hello;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -19,6 +20,13 @@ public class Hellomain {
     public String variableRequest(@PathVariable String name){
         return "Hello  "+ name +" from BridgeLabz";
     }
+    @PostMapping("/post")
+    public String postRequest(@RequestBody Hello hello){
+        return "Hello  "+ hello.getName() +hello.getLastName();
+    }
+
+
+
 
 
 }
